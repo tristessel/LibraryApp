@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.libraryapp.LibraryController"
+      spacing="10" style="-fx-padding: 10;">
+    <TableView fx:id="table">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title"/>
+            <TableColumn fx:id="authorColumn" text="Author"/>
+            <TableColumn fx:id="yearColumn" text="Year"/>
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <TextField fx:id="titleField" promptText="Title"/>
+        <TextField fx:id="authorField" promptText="Author"/>
+        <TextField fx:id="yearField" promptText="Year"/>
+        <Button text="Add" onAction="#onAdd"/>
+        <Button text="Update" onAction="#onUpdate"/>
+        <Button text="Delete" onAction="#onDelete"/>
+    </HBox>
+</VBox>
